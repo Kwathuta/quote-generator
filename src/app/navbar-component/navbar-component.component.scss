@@ -1,0 +1,25 @@
+nav {
+  height: 100px;
+  padding: 0 50px;
+  background-color: #f8bd19;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+
+  img {
+    margin-top: 20px;
+  }
+
+  li {
+    margin: 20px;
+  }
+
+  button {
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}

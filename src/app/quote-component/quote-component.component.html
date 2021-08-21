@@ -1,1 +1,8 @@
-<p>quote-component works!</p>
+<div *ngFor="let quote of arrayQuotes">
+  {{ quote.proverb }}
+  {{ quote.author }}
+  {{ quote.user }}
+  {{ quote.likes }}
+  {{ quote.dislikes }}
+  {{ quote.datePosted | date }}
+</div>
