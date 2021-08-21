@@ -8,6 +8,8 @@ import { QuoteDetailsComponentComponent } from './quote-component/quote-details-
 import { NavbarComponentComponent } from './navbar-component/navbar-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
+import { ModalComponent } from './modal/modal.component';
+import { FormComponent } from './modal/form/form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HeaderComponentComponent } from './header-component/header-component.co
     QuoteDetailsComponentComponent,
     NavbarComponentComponent,
     FooterComponentComponent,
-    HeaderComponentComponent
+    HeaderComponentComponent,
+    ModalComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
