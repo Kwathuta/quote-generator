@@ -1,8 +1,20 @@
-<div *ngFor="let quote of arrayQuotes">
-  {{ quote.proverb }}
-  {{ quote.author }}
-  {{ quote.user }}
-  {{ quote.likes }}
-  {{ quote.dislikes }}
-  {{ quote.datePosted | date }}
+<div
+  class="
+    cardSect
+    row row-cols-lg-3 row-cols-md-2 row-cols-sm-1
+    container-fluid
+    gy-3
+  "
+>
+  <div class="col" *ngFor="let quote of arrayQuotes; let i = index">
+    <div class="quoteCard">
+      <div class="quote">
+        <p>{{ quote.proverb }}</p>
+      </div>
+      <app-quote-details-component
+        [quote]="quote"
+        (del)="deleteQuote($event, i)"
+      ></app-quote-details-component>
+    </div>
+  </div>
 </div>

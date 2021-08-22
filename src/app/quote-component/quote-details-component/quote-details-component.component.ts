@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Quote } from '../../quote';
 
 @Component({
   selector: 'app-quote-details-component',
@@ -6,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-details-component.component.scss']
 })
 export class QuoteDetailsComponentComponent implements OnInit {
+
+  @Input() quote!:Quote;
+
+  @Output() del = new EventEmitter<boolean>();
+
+  quoteDelete(clear:boolean) {
+    this.del.emit(clear);
+  }
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { Quote } from '../quote';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-quote-component',
@@ -10,8 +10,17 @@ export class QuoteComponentComponent implements OnInit {
 
   arrayQuotes:Quote[] = [
     new Quote('You only live ONCE', 'Kelvin Gitahi', 'Devin Belane'),
+    new Quote('You only live ONCE', 'Kelvin Gitahi', 'Devin Belane'),
+    new Quote('You only live ONCE', 'Kelvin Gitahi', 'Devin Belane'),
     new Quote('You only live ONCE', 'Kelvin Gitahi', 'Devin Belane')
   ]
+
+
+  deleteQuote(del:any,index:number){
+    if (del) {
+      this.arrayQuotes.splice(index,1)
+    }
+  }
 
   constructor() { }
 

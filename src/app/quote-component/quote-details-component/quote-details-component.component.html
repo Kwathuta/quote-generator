@@ -1,1 +1,28 @@
-<p>quote-details-component works!</p>
+<div class="quote-details">
+  <div class="details-main d-flex">
+    <div class="credits">
+      <p>Author: {{ quote.author }}</p>
+      <p>Uploaded By: {{ quote.user }}</p>
+    </div>
+    <div class="delete">
+      <button (click)="quoteDelete(true)">
+        <img src="../../assets/img/trash-2.svg" alt="delete" />
+      </button>
+    </div>
+  </div>
+  <div class="time-interaction d-flex">
+    <div class="interaction d-flex">
+      <div class="likes">
+        <img src="../../assets/img/heart.svg" alt="like" />
+        {{ quote.likes }}
+      </div>
+      <div class="dislikes">
+        <img src="../../assets/img/thumbs-down.svg" alt="dislike" />
+        {{ quote.dislikes }}
+      </div>
+    </div>
+    <div class="time-posted text-right">
+      {{ quote.datePosted | date }}
+    </div>
+  </div>
+</div>
