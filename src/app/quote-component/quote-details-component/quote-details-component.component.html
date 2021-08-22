@@ -1,8 +1,8 @@
 <div class="quote-details">
   <div class="details-main d-flex">
     <div class="credits">
-      <p>Author: {{ quote.author }}</p>
-      <p>Uploaded By: {{ quote.user }}</p>
+      <p>Author: {{ quoteDC.author }}</p>
+      <p>Uploaded By: {{ quoteDC.user }}</p>
     </div>
     <div class="delete">
       <button (click)="quoteDelete(true)">
@@ -13,16 +13,20 @@
   <div class="time-interaction d-flex">
     <div class="interaction d-flex">
       <div class="likes">
-        <img src="../../assets/img/heart.svg" alt="like" />
-        {{ quote.likes }}
+        <button (click)="addLike(true)">
+          <img src="../../assets/img/heart.svg" alt="like" />
+        </button>
+        {{ quoteDC.likes }}
       </div>
       <div class="dislikes">
-        <img src="../../assets/img/thumbs-down.svg" alt="dislike" />
-        {{ quote.dislikes }}
+        <button (click)="addDislike(true)">
+          <img src="../../assets/img/thumbs-down.svg" alt="dislike" />
+        </button>
+        {{ quoteDC.dislikes }}
       </div>
     </div>
     <div class="time-posted text-right">
-      {{ quote.datePosted | date }}
+      {{ quoteDC.datePosted | date }}
     </div>
   </div>
 </div>

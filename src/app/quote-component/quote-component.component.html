@@ -12,8 +12,10 @@
         <p>{{ quote.proverb }}</p>
       </div>
       <app-quote-details-component
-        [quote]="quote"
+        [quoteDC]="quote"
         (del)="deleteQuote($event, i)"
+        (newLike)="addLike($event, i)"
+        (newDislike)="addDislike($event, i)"
       ></app-quote-details-component>
     </div>
   </div>
