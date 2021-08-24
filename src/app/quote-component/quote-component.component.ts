@@ -33,6 +33,11 @@ export class QuoteComponentComponent implements OnInit {
     }
   }
 
+  newQuote(quoteNew:any) {
+    this.arrayQuotes.push(quoteNew)
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {

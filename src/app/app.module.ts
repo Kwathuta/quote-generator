@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,8 @@ import { NavbarComponentComponent } from './navbar-component/navbar-component.co
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { ModalComponent } from './modal/modal.component';
-import { FormComponent } from './modal/form/form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { FormComponent } from './modal/form/form.component';
     FooterComponentComponent,
     HeaderComponentComponent,
     ModalComponent,
-    FormComponent
+    FormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
